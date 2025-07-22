@@ -1,0 +1,1 @@
+import{j as e}from"./index-C1_ZM8EK.js";import"./react-vendor-C8sD07fA.js";import"./image-vendor-CGS74YQe.js";function s(){return e.jsx("footer",{className:"text-center py-4",children:e.jsx("p",{children:"powered by ©Hexacode. All rights reserved."})})}export{s as Footer};
