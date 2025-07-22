@@ -8,7 +8,7 @@ export function BookingSection() {
   // Update these with your actual Calendly URLs
   const calendlyUrls = {
     'half-day': 'https://calendly.com/namelesspharoe/half-day-private-lesson-4-hours-1-250',
-    'full-day': 'https://calendly.com/namelesspharoe/30min'
+    'full-day': 'https://calendly.com/namelesspharoe/full-day-private'
   };
 
   const packages = [
