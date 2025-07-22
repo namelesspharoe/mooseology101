@@ -9,7 +9,6 @@ import { Hero } from './components/Hero';
 import { ImageSection } from './components/ImageSection';
 import { TheMountain } from './components/TheMountain';
 import { TripTips } from './components/TripTips';
-import { Lessons } from './components/Lessons';
 import { Navigation } from './components/Navigation';
 import { Testimonials } from './components/Testimonials';
 import { Venmo } from './components/Venmo';
