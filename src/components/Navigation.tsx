@@ -35,8 +35,8 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="home" smooth={true} duration={500} className="cursor-pointer">
-          <h1 className="text-2xl font-bold text-white tracking-wider">
-            Mooseology101
+          <h1 className="text-2xl font-bold text-white tracking-wider" style={{ fontFamily: 'Fontdiner Swanky, cursive' }}>
+            MOOSEOLOGY101
           </h1>
         </Link>
 

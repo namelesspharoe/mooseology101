@@ -26,7 +26,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Meet "The Moose"</h2>
+            <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: 'Fredoka One, cursive' }}>Meet "The Moose"</h2>
             <p>
               Summer is midway and we're into the shorts and swim suits, but in
               a blink it's over and the snow will be falling. Get your

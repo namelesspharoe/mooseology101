@@ -58,7 +58,7 @@ export function Testimonials() {
               className="rounded-lg shadow-xl w-64 h-64"
             />
           </div>
-          <h2 className="text-4xl font-bold mb-4">Student Success Stories</h2>
+          <h2 className="text-4xl font-bold mb-4" style={{ fontFamily: 'Fredoka One, cursive' }}>Student Success Stories</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Hear from skiers who have transformed their skills with Moose's
             guidance

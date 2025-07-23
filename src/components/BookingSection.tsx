@@ -15,10 +15,10 @@ export function BookingSection() {
     {
       id: 'half-day' as const,
       title: 'Half Day Private',
-      duration: '4 hours',
+      duration: '3 hours',
       price: '$1,250',
       features: [
-        'Personalized instruction',
+        'Morning or Afternoon Session',
         'Skill level assessment',
         'Technique refinement',
         'Real-time feedback'
@@ -49,7 +49,7 @@ export function BookingSection() {
         >
           <h2 className="text-4xl font-bold mb-4">Book Your Lesson</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Choose your package and select your preferred time slot
+            View availability and select your preferred time slot, once confirmed Moose or a Park City representative will reach out to you to confirm the details.
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export function BookingSection() {
                   ))}
                 </ul>
                 <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                  Select Package
+                  Select Date and view availability
                 </button>
               </motion.div>
             ))}

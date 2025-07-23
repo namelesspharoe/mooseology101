@@ -46,7 +46,7 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
+          <h2 className="text-4xl font-bold mb-4" style={{ fontFamily: 'Fredoka One, cursive' }}>Get in Touch</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Have questions or want to check availability? Send a message below.
           </p>
