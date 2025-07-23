@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export function TripTips() {
   const tips = [
@@ -24,7 +26,7 @@ export function TripTips() {
             base of 6,800 feet. These tips come from personal experience!
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
           {tips.map((tip, index) => (
             <motion.div
               key={index}
@@ -38,6 +40,19 @@ export function TripTips() {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
+        >
+          <LazyLoadImage
+            src="https://i.ibb.co/CDJGd8R/Teacher-Moose-With-Ski-Poles.png"
+            alt="Teacher Moose with ski poles"
+            effect="blur"
+            className="rounded-lg shadow-xl w-full max-w-md"
+          />
+        </motion.div>
       </div>
     </section>
   );

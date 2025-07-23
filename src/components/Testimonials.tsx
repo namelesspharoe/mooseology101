@@ -7,24 +7,18 @@ import { useCallback } from "react";
 const testimonials = [
   {
     name: "Sarah Johnson",
-    level: "Beginner",
     quote:
       "Moose's patient teaching style helped me overcome my fear of skiing. I went from never skiing to confidently cruising down green runs in just two lessons!",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
   },
   {
     name: "Michael Chen",
-    level: "Intermediate",
     quote:
       "The personalized attention and technical expertise Moose provides is outstanding. He helped me perfect my form and tackle more challenging terrain with confidence.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
   },
   {
     name: "Emily Rodriguez",
-    level: "Advanced",
     quote:
       "Even as an experienced skier, Moose helped me discover new techniques and approaches that took my skiing to the next level. His knowledge is incredible!",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
   },
 ];
 
@@ -56,6 +50,14 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
+          <div className="flex justify-center mb-6">
+            <LazyLoadImage
+              src="https://i.ibb.co/23ktQ88J/Moose-Approved-Red.png"
+              alt="Moose Approved Red"
+              effect="blur"
+              className="rounded-lg shadow-xl w-64 h-64"
+            />
+          </div>
           <h2 className="text-4xl font-bold mb-4">Student Success Stories</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Hear from skiers who have transformed their skills with Moose's
@@ -71,21 +73,12 @@ export function Testimonials() {
                 className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-4"
               >
                 <div className="h-full bg-gray-800/50 backdrop-blur-md p-8 rounded-lg text-center">
-                  <LazyLoadImage
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    effect="blur"
-                    className="w-24 h-24 rounded-full mx-auto mb-6 object-cover shadow-lg"
-                  />
                   <p className="text-lg mb-6 italic text-gray-300">
                     "{testimonial.quote}"
                   </p>
                   <h3 className="font-bold text-xl text-white">
                     {testimonial.name}
                   </h3>
-                  <p className="text-sm text-blue-300">
-                    {testimonial.level} Skier
-                  </p>
                 </div>
               </div>
             ))}

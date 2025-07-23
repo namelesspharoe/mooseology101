@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import ReactPlayer from "react-player";
 
-const videoUrl = "https://www.youtube.com/watch?v=bwUehKTHwn0"; 
+const videoUrl = "https://www.youtube.com/watch?v=J_WBXDaGZYc"; 
 
 export function Hero() {
   const textVariants = {

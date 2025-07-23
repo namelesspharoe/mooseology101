@@ -14,7 +14,7 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <LazyLoadImage
-              src="https://i.ibb.co/MyMcKpJY/cid-61-D0-D0-A4-F5-A2-42-B4-A4-BB-2-E825-B88-DC7-C-1.png"
+              src="https://i.ibb.co/Fkpn7L0G/moose2.png"
               alt="The Moose on the slopes"
               effect="blur"
               className="rounded-lg shadow-xl w-full"
@@ -75,6 +75,13 @@ export function About() {
                 src="https://i.ibb.co/bjmxh3TD/Screenshot-2024-02-04-at-10-01-45-AM.png"
                 alt="I Survived The Moose Sticker"
                 className="rounded-full shadow-xl w-64 h-64"
+              />
+            </div>
+            <div className="flex justify-center mt-6">
+              <img
+                src="https://i.ibb.co/QskH2gs/moose1.png"
+                alt="I Survived The Moose Sticker"
+                className="shadow-xl"
               />
             </div>
           </div>

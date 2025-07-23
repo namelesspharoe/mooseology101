@@ -18,7 +18,7 @@ export function Contact() {
     try {
       const subject = `Ski Lesson Inquiry from ${formData.name}`;
       const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-      window.location.href = `mailto:info@mountainpeak.com?subject=${encodeURIComponent(
+      window.location.href = `mailto:robertjon1@mac.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
       toast.success("Redirecting to your email client!");

@@ -11,6 +11,9 @@ export function ImageSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
+        <h2 className="text-4xl font-bold text-center mb-8 text-white">
+          Remember those Moose Droppings
+        </h2>
         <LazyLoadImage
           src="https://i.ibb.co/MyMcKpJY/cid-61-D0-D0-A4-F5-A2-42-B4-A4-BB-2-E825-B88-DC7-C-1.png"
           alt="Professional skier demonstrating proper skiing technique"
