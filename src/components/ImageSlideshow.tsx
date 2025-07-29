@@ -57,7 +57,7 @@ export function ImageSlideshow({
             key={currentIndex}
             src={images[currentIndex].src}
             alt={images[currentIndex].alt}
-            className="w-full h-64 md:h-80 object-cover"
+            className="w-full h-64 md:h-96 lg:h-[500px] object-cover"
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}

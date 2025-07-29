@@ -6,21 +6,28 @@ import { ImageSlideshow } from "./ImageSlideshow";
 export function About() {
   const slideshowImages = [
     {
-      src: "https://i.ibb.co/QskH2gs/moose1.png",
+      src: "https://i.ibb.co/vMnBxMP/IMG-7497.png",
       alt: "The Moose on the slopes"
     },
     {
-      src: "https://i.ibb.co/Fkpn7L0G/moose2.png",
-      alt: "The Moose teaching"
-    },
-    {
-      src: "https://i.ibb.co/bjmxh3TD/Screenshot-2024-02-04-at-10-01-45-AM.png",
-      alt: "I Survived The Moose Sticker"
-    },
-    {
-      src: "https://i.ibb.co/23ktQ88J/Moose-Approved-Red.png",
+      src: "https://i.ibb.co/LhJxTSwN/IMG-1164.jpg",
       alt: "Moose Approved Red"
-    }
+    },
+    {
+      src: "https://i.ibb.co/9H1KL1JS/IMG-4837-copy.jpg",
+      alt: "Moose Approved Red"
+    }, 
+    {
+      src: "https://i.ibb.co/6Rk77THC/IMG-0145.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/tPpBVKkj/IMG-1274.jpg",
+      alt: "Moose Approved Red"
+    },
+    
+    
+
   ];
 
   return (
