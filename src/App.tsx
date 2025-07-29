@@ -21,11 +21,12 @@ function App() {
       <main>
         <Hero />
         <div className="container mx-auto px-4 space-y-24">
-          <BookingSection />
+          
           <About />
           <ImageSection />
           <TheMountain />
           <TripTips />
+          <BookingSection />
           <Testimonials />
           <FAQ />
           <Venmo />

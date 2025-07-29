@@ -118,6 +118,28 @@ export function BookingSection() {
           </motion.div>
         )}
       </div>
+      
+      {/* Disclaimer */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mt-16 max-w-4xl mx-auto"
+      >
+        <div className="bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-6">
+          <h4 className="text-base font-bold text-yellow-300 mb-3">Please Note:</h4>
+          <p className="text-xs text-white/90 leading-relaxed">
+            All Ski Lessons Are Booked Through Park City Ski School to ensure a safe, legal and quality experience. 
+            Freelance or independent ski lessons conducted on Park City / Canyons and Deervalley resort properties 
+            are not permitted and considered "Theft Of Services" potentially leading to life time bans at any Vail 
+            property to facing possible legal actions for trespassing and breach of agreement.
+          </p>
+          <p className="text-xs text-white/90 mt-3 font-semibold">
+            Thank you,<br />
+            Moose
+          </p>
+        </div>
+      </motion.div>
     </section>
   );
 }

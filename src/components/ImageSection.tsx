@@ -4,7 +4,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 export function ImageSection() {
   return (
-    <div className="py-12">
+    <div className="pb-8">
       <motion.div
         className="max-w-7xl mx-auto"
         initial={{ opacity: 0, y: 50 }}

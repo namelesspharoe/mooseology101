@@ -31,7 +31,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="pt-20 px-4">
       <div className="max-w-6xl mx-auto space-y-20">
         {/* Instructor Intro */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -97,11 +97,37 @@ export function About() {
             <p className="text-center font-bold">
               "I survived The Moose" stickers included!
             </p>
+            
+            {/* Three pictures in a row */}
+            <div className="flex justify-center items-center gap-4 mt-6 mb-8">
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/GmSSwVX/Moose-Pack-Prod-072225.jpg"
+                  alt="I Survived The Moose Sticker"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/bjmxh3TD/Screenshot-2024-02-04-at-10-01-45-AM.png"
+                  alt="The Moose on the slopes"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/qYNpLj4J/Moose-Master-Prod-072225.jpg"
+                  alt="Moose Approved Red"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+            </div>
+
             <div className="mt-8">
               <ImageSlideshow 
                 images={slideshowImages}
                 autoPlay={true}
-                interval={4000}
+                interval={8000}
                 showDots={true}
                 showArrows={true}
               />
@@ -116,7 +142,7 @@ export function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-3xl font-bold mb-4">
+          <h3 className="text-3xl font-bold mb-0 ">
             For My Veteran "I Survived The Moose" Students
           </h3>
           <p className="prose prose-invert lg:prose-xl max-w-3xl mx-auto text-center">
