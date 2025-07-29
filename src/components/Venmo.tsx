@@ -29,7 +29,7 @@ export function Venmo() {
           </h3>
           <div className="flex justify-center mb-6">
             <LazyLoadImage
-              src="https://i.ibb.co/GHv3gsJ/cid-61-D0-D0-A4-F5-A2-42-B4-A4-BB-2-E825-B88-DC7-C.png"
+              src="https://i.ibb.co/1tHkN0ZP/Rendered-Image.jpg"
               alt="Moose's Venmo QR Code"
               effect="blur"
               className="w-56 h-56 rounded-lg shadow-lg"
