@@ -65,7 +65,7 @@ export function Hero() {
         <motion.p
           className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8"
           variants={itemVariants}
-          style={{ fontFamily: 'Comic Neue, cursive' }}
+          style={{ fontFamily: 'Fredoka One, cursive' }}
         >
           Book a private lesson with "The Moose" and start planning your
           2025/2026 ski trip. Plan ahead to secure your dates!
