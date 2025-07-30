@@ -11,7 +11,7 @@ export function TripTips() {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section className="pt-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,6 +53,7 @@ export function TripTips() {
             className="rounded-lg shadow-xl w-full max-w-md"
           />
         </motion.div>
+        
       </div>
     </section>
   );
