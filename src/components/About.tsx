@@ -58,7 +58,7 @@ export function About() {
               Summer is midway and we're into the shorts and swim suits, but in
               a blink it's over and the snow will be falling. Get your
               calendars out and start planning your 2025/2026 ski trip in
-              advance and add private ski lessons with me, "The Moose"!
+              advance and add private ski lessons with me, "The Moose!"
             </p>
             <p>
               I am a local full-time ski instructor here at Park City, ready to

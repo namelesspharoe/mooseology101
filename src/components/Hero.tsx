@@ -76,9 +76,9 @@ export function Hero() {
             smooth={true}
             duration={500}
             offset={-70}
-            className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
+            className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold text-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
           >
-            Book Your Lesson
+            Book Your Lesson Today
           </Link>
         </motion.div>
       </motion.div>

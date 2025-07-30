@@ -50,7 +50,7 @@ export function BookingSection() {
         <div className=" mb-20 bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-6">
           <h4 className="text-base font-bold text-yellow-300 mb-3">Please Note:</h4>
           <p className="text-xs text-white/90 leading-relaxed">
-            All Ski Lessons Are Booked Through Park City Ski School to ensure a safe, legal and quality experience. 
+            All ski lessons are booked through Park City Ski School to ensure a safe, legal and quality experience. 
             Freelance or independent ski lessons conducted on Park City / Canyons and Deervalley resort properties 
             are not permitted and considered "Theft Of Services" potentially leading to life time bans at any Vail 
             property to facing possible legal actions for trespassing and breach of agreement.
