@@ -65,7 +65,7 @@ export function Footer() {
         <p>
           Powered by{" "}
           <a
-            href="https://www.hexacode.com"
+            href="https://github.com/namelesspharoe"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
