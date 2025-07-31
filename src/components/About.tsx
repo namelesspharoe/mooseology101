@@ -66,9 +66,9 @@ export function About() {
               advance and add private ski lessons with me, "The Moose!"
             </p>
             <p>
-              I am a local full-time certifiedski instructor here at Park City, ready to
-              make your ski vacation at Park City Mountainside, Canyons, and Deer Valley Fun,
-              Safe, and the most Memorable Epic Ski Vacation ever.
+              I am a local full-time certified ski instructor here at Park City, ready to
+              make your ski vacation at Park City Mountain, Canyons, and Deer Valley fun,
+              safe, and the most memorable epic ski vacation ever.
             </p>
           </motion.div>
         </div>
@@ -97,7 +97,7 @@ export function About() {
               it's on to learning how to get on and off the lift safely and on
               to a beginner slope. What I just explained all happens in about
               the first 30-60 min, changing the inner screams and fears into
-              outer smiles and laughter. We have Fun!
+              outer smiles and laughter. We have fun!
             </p>
             <p className="text-center font-bold">
               "I survived The Moose" stickers included!
