@@ -78,7 +78,7 @@ export function Testimonials() {
 
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {testimonials.map((testimonial, index) => {
+            {testimonials.map((testimonial) => {
               const [isExpanded, setIsExpanded] = useState(false);
               const isLongQuote = testimonial.quote.length > 200;
               const displayQuote = isLongQuote && !isExpanded 
