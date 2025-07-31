@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 
@@ -23,65 +23,102 @@ export function ImageSlideshow({
   images, 
   autoPlay = true, 
   interval = 2000, 
-  showDots = true, 
-  showArrows = true 
+  showDots = false, 
+  showArrows = false 
 }: ImageSlideshowProps) {
   const swiperRef = useRef<any>(null);
+  const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
   if (images.length === 0) {
     return <div className="text-center text-gray-400">No images to display</div>;
   }
 
   return (
-    <div className="relative w-full mx-auto">
-      <Swiper
-        ref={swiperRef}
-        effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView="auto"
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={showDots ? {
-          clickable: true,
-          dynamicBullets: true,
-        } : false}
-        navigation={showArrows}
-        autoplay={autoPlay ? {
-          delay: interval,
-          disableOnInteraction: false,
-        } : false}
-        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-        className="w-full"
-        style={{
-          paddingTop: '20px',
-          paddingBottom: '20px',
-        }}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide 
-            key={index}
-            style={{ 
-              width: '280px',
-              height: '320px',
-            }}
-            className="sm:w-[35rem] sm:h-[40rem]"
-          >
-            <div className="relative w-full h-full rounded-lg overflow-hidden shadow-xl">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      <div className="relative w-screen -mx-4 px-4 sm:px-0">
+        <Swiper
+          ref={swiperRef}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          spaceBetween={30}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={showDots ? {
+            clickable: true,
+            dynamicBullets: true,
+          } : false}
+          navigation={showArrows}
+          autoplay={autoPlay ? {
+            delay: interval,
+            disableOnInteraction: false,
+          } : false}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+          className="w-full"
+          style={{
+            paddingTop: '20px',
+            paddingBottom: '20px',
+          }}
+        >
+          {images.map((image, index) => (
+            <SwiperSlide 
+              key={index}
+              style={{ 
+                width: '300px',
+                height: '400px',
+              }}
+              className="sm:w-[400px] sm:h-[500px] lg:w-[500px] lg:h-[600px] xl:w-[600px] xl:h-[700px]"
+            >
+              <div 
+                className="relative w-full h-full rounded-lg overflow-hidden shadow-xl cursor-pointer"
+                onClick={() => setFullscreenImage(image.src)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Fullscreen Modal */}
+      {fullscreenImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setFullscreenImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <img
+              src={fullscreenImage}
+              alt="Fullscreen view"
+              className="max-w-full max-h-full object-contain"
+            />
+            <button
+              onClick={() => setFullscreenImage(null)}
+              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 } 

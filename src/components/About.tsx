@@ -1,39 +1,10 @@
 import { motion } from "framer-motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { ImageSlideshow } from "./ImageSlideshow";
+
 
 export function About() {
-  const slideshowImages = [
-    {
-      src: "https://i.ibb.co/vMnBxMP/IMG-7497.png",
-      alt: "The Moose on the slopes"
-    },
-    
-    {
-      src: "https://i.ibb.co/tPpBVKkj/IMG-1274.jpg",
-      alt: "Moose Approved Red"
-    },
-    {
-      src: "https://i.ibb.co/0pcCWK41/IMG-0564.jpg",
-      alt: "Moose Approved Red"
-    },
-    {
-      src: "https://i.ibb.co/LhJxTSwN/IMG-1164.jpg",
-      alt: "Moose Approved Red"
-    },
-    {
-      src: "https://i.ibb.co/mrMvTmYb/IMG-1926.jpg",
-      alt: "Moose Approved Red"
-    },
-    {
-      src: "https://i.ibb.co/9kkwQ1hK/IMG-0613.jpg",
-      alt: "Moose Approved Red"
-    },
-    
-    
-
-  ];
+ 
 
   return (
     <section id="about" className="pt-20 px-4">
@@ -127,18 +98,10 @@ export function About() {
                 />
               </div>
             </div>
-
-            <div className="mt-8">
-              <ImageSlideshow 
-                images={slideshowImages}
-                autoPlay={true}
-                interval={8000}
-                showDots={true}
-                showArrows={true}
-              />
-            </div>
           </div>
         </motion.div>
+
+
 
         {/* For Veteran Students */}
         <motion.div
