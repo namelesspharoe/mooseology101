@@ -56,14 +56,14 @@ export function Hero() {
         animate="visible"
       >
         <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4"
+          className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4"
           variants={itemVariants}
           
         >
           Elevate Your Ski Experience
         </motion.h1>
         <motion.p
-          className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8"
+          className="text-sm sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-8"
           variants={itemVariants}
         
         >
@@ -76,7 +76,7 @@ export function Hero() {
             smooth={true}
             duration={500}
             offset={-70}
-            className="px-8 py-4 bg-blue-600 text-white rounded-full font-semibold text-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
+            className="px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white rounded-full font-semibold text-base sm:text-xl hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
           >
             Book Your Lesson Today
           </Link>

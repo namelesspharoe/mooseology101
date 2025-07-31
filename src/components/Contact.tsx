@@ -117,7 +117,7 @@ export function Contact() {
           </form>
         </div>
 
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <h3 className="text-2xl font-bold mb-4">Booking Process</h3>
           <ol className="text-lg text-white/90 space-y-4 max-w-2xl mx-auto">
             <li>1. Confirm availability with Moose via the form above.</li>
@@ -135,7 +135,7 @@ export function Contact() {
             </li>
             <li>3. Reach out one last time to confirm.</li>
           </ol>
-        </div>
+        </div> */}
       </div>
     </section>
   );

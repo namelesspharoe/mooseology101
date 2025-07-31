@@ -16,7 +16,6 @@ export function BookingSection() {
       id: 'half-day' as const,
       title: 'Half Day Private',
       duration: '3 hours',
-      price: '$1,250',
       features: [
         'Morning or Afternoon Session',
         'Skill level assessment',
@@ -28,7 +27,6 @@ export function BookingSection() {
       id: 'full-day' as const,
       title: 'Full Day Private',
       duration: '7 hours',
-      price: '$1,799',
       features: [
         'Extended personalized instruction',
         'Comprehensive skill development',
@@ -49,9 +47,9 @@ export function BookingSection() {
       >
         <div className=" mb-20 bg-yellow-900/20 border border-yellow-600/30 rounded-lg p-6">
           <h4 className="text-base font-bold text-yellow-300 mb-3">Please Note:</h4>
-          <p className="text-xs text-white/90 leading-relaxed">
+          <p className="text-sm text-white/90 leading-relaxed">
             All ski lessons are booked through Park City Ski School to ensure a safe, legal and quality experience. 
-            Freelance or independent ski lessons conducted on Park City / Canyons and Deervalley resort properties 
+            Freelance or independent ski lessons conducted on Park City / Canyons and Deer Valley resort properties 
             are not permitted and considered "Theft Of Services" potentially leading to life time bans at any Vail 
             property to facing possible legal actions for trespassing and breach of agreement.
           </p>
@@ -82,11 +80,9 @@ export function BookingSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="glass-card cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => setSelectedPackage(pkg.id)}
+                className="glass-card"
               >
                 <h3 className="text-2xl font-bold mb-2">{pkg.title}</h3>
-                <div className="text-3xl font-bold mb-4 text-blue-300">{pkg.price}</div>
                 <div className="text-sm mb-4">{pkg.duration}</div>
                 <ul className="text-left space-y-2 mb-6">
                   {pkg.features.map((feature, i) => (
@@ -96,8 +92,11 @@ export function BookingSection() {
                     </li>
                   ))}
                 </ul>
-                <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
-                  Select Date and view availability
+                <button 
+                  className="w-full px-6 py-3 bg-gray-500 text-white rounded-full cursor-not-allowed opacity-50" 
+                  disabled
+                >
+                  Lessons available for booking August 24
                 </button>
               </motion.div>
             ))}

@@ -9,9 +9,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { href: "https://www.instagram.com", label: "Instagram" },
-  { href: "https://www.facebook.com", label: "Facebook" },
-  { href: "https://www.twitter.com", label: "Twitter" },
+  { href: "https://www.tiktok.com/@ollie_wobbless", label: "Instagram" },
+  { href: "https://www.tiktok.com/@ollie_wobbless", label: "Facebook" },
+  { href: "https://www.tiktok.com/@ollie_wobbless", label: "Twitter" },
 ];
 
 export function Footer() {

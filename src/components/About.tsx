@@ -9,20 +9,25 @@ export function About() {
       src: "https://i.ibb.co/vMnBxMP/IMG-7497.png",
       alt: "The Moose on the slopes"
     },
+    
+    {
+      src: "https://i.ibb.co/tPpBVKkj/IMG-1274.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/0pcCWK41/IMG-0564.jpg",
+      alt: "Moose Approved Red"
+    },
     {
       src: "https://i.ibb.co/LhJxTSwN/IMG-1164.jpg",
       alt: "Moose Approved Red"
     },
     {
-      src: "https://i.ibb.co/9H1KL1JS/IMG-4837-copy.jpg",
-      alt: "Moose Approved Red"
-    }, 
-    {
-      src: "https://i.ibb.co/6Rk77THC/IMG-0145.jpg",
+      src: "https://i.ibb.co/mrMvTmYb/IMG-1926.jpg",
       alt: "Moose Approved Red"
     },
     {
-      src: "https://i.ibb.co/tPpBVKkj/IMG-1274.jpg",
+      src: "https://i.ibb.co/9kkwQ1hK/IMG-0613.jpg",
       alt: "Moose Approved Red"
     },
     
@@ -61,8 +66,8 @@ export function About() {
               advance and add private ski lessons with me, "The Moose!"
             </p>
             <p>
-              I am a local full-time ski instructor here at Park City, ready to
-              make your ski vacation at Park City Mountainside and Canyons Fun,
+              I am a local full-time certifiedski instructor here at Park City, ready to
+              make your ski vacation at Park City Mountainside, Canyons, and Deer Valley Fun,
               Safe, and the most Memorable Epic Ski Vacation ever.
             </p>
           </motion.div>
