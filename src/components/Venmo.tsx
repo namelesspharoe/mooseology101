@@ -36,7 +36,7 @@ export function Venmo() {
             />
           </div>
           <p className="text-xl text-white">
-            Venmo: <span className="font-bold text-blue-300">@Moose-Ski</span>
+            Venmo: <span className="font-bold text-blue-300">@Robertjon54</span>
           </p>
         </motion.div>
       </div>

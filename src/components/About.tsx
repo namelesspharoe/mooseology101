@@ -31,16 +31,22 @@ export function About() {
           >
             <h2 className="text-3xl font-bold mb-4">Meet "The Moose"</h2>
             <p>
-              Summer is midway and we're into the shorts and swim suits, but in
-              a blink it's over and the snow will be falling. Get your
-              calendars out and start planning your 2025/2026 ski trip in
-              advance and add private ski lessons with me, "The Moose!"
+              Summer is midway and we're into the shorts and swim suits, but in a blink it's over and the snow will be falling. So get your calendars out and start planning your 2025/2026 ski trip in advance and add private ski lessons with me, "The Moose"! I am a local full-time certified ski instructor here at Park City Ski School along with a host of others that are here to help you make your ski vacation at Park City Mountainside, Canyons and Deer Valley fun, safe and the most memorable epic ski vacation ever.
             </p>
             <p>
-              I am a local full-time certified ski instructor here at Park City, ready to
-              make your ski vacation at Park City Mountain, Canyons, and Deer Valley fun,
-              safe, and the most memorable epic ski vacation ever.
+              I create a fun one-on-one personalized learning experience that's tailored to your specific needs, abilities or learning style. From first-time "never-evers" to advanced skiers, I make it fun while you learn at all levels.
             </p>
+            <p>
+              Park City Mountain Resort is a premier ski destination with easy access being under an hour from the Salt Lake City airport, complete with local lodging, great dining and galleries nestled in and around Park City. Have me, "The Moose" help get you started safely, in control and in the right direction - which is all "downhill from here".
+            </p>
+            <p>
+              Book today to secure your vacation dates with me "The Moose" that best work for you.
+            </p>
+            <p className="font-semibold">
+              Ski you soon,<br />
+              The Moose
+            </p>
+           
           </motion.div>
         </div>
 

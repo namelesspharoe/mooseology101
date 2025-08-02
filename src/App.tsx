@@ -40,6 +40,39 @@ function App() {
       src: "https://i.ibb.co/9kkwQ1hK/IMG-0613.jpg",
       alt: "Moose Approved Red"
     },
+    {
+      src: "https://i.ibb.co/cShRYykN/IMG-1030.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/9H1KL1JS/IMG-4837-copy.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/q3VD2NkB/IMG-2862.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/JWQ1LsDQ/IMG-0717.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/PZZmYkk6/IMG-3412.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/9kkwQ1hK/IMG-0613.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/fjw8TdS/IMG-0064.jpg",
+      alt: "Moose Approved Red"
+    },
+    {
+      src: "https://i.ibb.co/6Rk77THC/IMG-0145.jpg",
+      alt: "Moose Approved Red"
+    },
+    
   ];
 
   return (
