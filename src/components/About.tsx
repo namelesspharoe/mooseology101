@@ -84,14 +84,64 @@ export function About() {
             <div className="flex justify-center items-center gap-4 mt-6 mb-8">
               <div className="flex-1 max-w-xs">
                 <img
-                  src="https://i.ibb.co/GmSSwVX/Moose-Pack-Prod-072225.jpg"
+                  src="https://i.ibb.co/R5hfww9/mooseapprovedgreen.png"
                   alt="I Survived The Moose Sticker"
                   className="w-full object-cover rounded-full shadow-lg"
                 />
               </div>
               <div className="flex-1 max-w-xs">
                 <img
-                  src="https://i.ibb.co/bjmxh3TD/Screenshot-2024-02-04-at-10-01-45-AM.png"
+                  src="https://i.ibb.co/nNCZg2NK/mooseapprovedblue.png"
+                  alt="The Moose on the slopes"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/B21yJ0m6/mooseapprovedblack.png"
+                  alt="Moose Approved Red"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+            </div>
+            
+            {/* Second row of three pictures */}
+            <div className="flex justify-center items-center gap-4 mt-6 mb-8">
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/fVkKKRz2/survivedmoosegreen.png"
+                  alt="I Survived The Moose Sticker"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/9H4CyYNq/survivedmooseblue.png"
+                  alt="The Moose on the slopes"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/HLsys6BK/survivedmooseblack.png"
+                  alt="Moose Approved Red"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+            </div>
+            
+            {/* Third row of three pictures */}
+            <div className="flex justify-center items-center gap-4 mt-6 mb-8">
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/qYNpLj4J/Moose-Master-Prod-072225.jpg"
+                  alt="I Survived The Moose Sticker"
+                  className="w-full object-cover rounded-full shadow-lg"
+                />
+              </div>
+              <div className="flex-1 max-w-xs">
+                <img
+                  src="https://i.ibb.co/23ktQ88J/Moose-Approved-Red.png"
                   alt="The Moose on the slopes"
                   className="w-full object-cover rounded-full shadow-lg"
                 />
