@@ -11,7 +11,7 @@ export function FAQ() {
     },
     {
       question: "How long are the lessons?",
-      answer: "Lessons range from 2-4 hours depending on the package you choose. We can also customize the duration to meet your specific needs."
+      answer: "Lessons range from 3-6 hours depending on the package you choose. We can also customize the duration to meet your specific needs."
     },
     {
       question: "Do I need prior experience?",
@@ -23,7 +23,7 @@ export function FAQ() {
     },
     {
       question: "Where do lessons take place?",
-      answer: "All lessons take place at Park City Mountain Resort. We'll confirm the exact meeting location when you book your lesson."
+      answer: "All lessons take place at Park City Mountainside, Canyons, or Deer Valley. We'll confirm the exact meeting location when you book your lesson."
     }
   ];
 
