@@ -31,7 +31,7 @@ export function About() {
           >
             <h2 className="text-3xl font-bold mb-4">Meet "The Moose"</h2>
             <p>
-              Summer is midway and we're into the shorts and swim suits, but in a blink it's over and the snow will be falling. So get your calendars out and start planning your 2025/2026 ski trip in advance and add private ski lessons with me, "The Moose"! I am a local full-time certified ski instructor here at Park City Ski School along with a host of others that are here to help you make your ski vacation at Park City Mountainside, Canyons and Deer Valley fun, safe and the most memorable epic ski vacation ever.
+              The leaves are turning color and starting to fall as summer quickly fades. Winters on our doorstep and Park City will soon be a winter wonderland full of new stories of skiing and snowboarding. So get your calendars out and start planning your 2025/2026 ski trip in advance and add private ski lessons with me, "The Moose"! I am a local full-time certified ski instructor here at Park City Ski School along with a host of others that are here to help you make your ski vacation at Park City Mountainside, Canyons and Deer Valley fun, safe and the most memorable epic ski vacation ever.
             </p>
             <p>
               I create a fun one-on-one personalized learning experience that's tailored to your specific needs, abilities or learning style. From first-time "never-evers" to advanced skiers, I make it fun while you learn at all levels.
