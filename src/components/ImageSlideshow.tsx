@@ -78,13 +78,13 @@ export function ImageSlideshow({
             <SwiperSlide 
               key={index}
               style={{ 
-                width: '300px',
-                height: '400px',
+                width: '400px',
+                height: '600px', // 2:3 aspect ratio (even taller)
               }}
-              className="sm:w-[400px] sm:h-[500px] lg:w-[500px] lg:h-[600px] xl:w-[600px] xl:h-[700px]"
+              className="sm:w-[500px] sm:h-[750px] lg:w-[700px] lg:h-[1050px] xl:w-[800px] xl:h-[1400px]"
             >
               <div 
-                className="relative w-full h-full rounded-lg overflow-hidden shadow-xl cursor-pointer"
+                className="relative w-full h-full rounded-lg overflow-hidden shadow-xl cursor-pointer bg-gray-100"
                 onClick={() => setFullscreenImage(image.src)}
               >
                 <img
