@@ -35,67 +35,65 @@ export function ImageSlideshow({
 
   return (
     <>
-      <div className="relative w-screen -mx-4 px-4 sm:px-0">
-        <Swiper
-          ref={swiperRef}
-          effect="coverflow"
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={1}
-          breakpoints={{
-            640: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          spaceBetween={30}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={showDots ? {
-            clickable: true,
-            dynamicBullets: true,
-          } : false}
-          navigation={showArrows}
-          autoplay={autoPlay ? {
-            delay: interval,
-            disableOnInteraction: false,
-          } : false}
-          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-          className="w-full"
-          style={{
-            paddingTop: '20px',
-            paddingBottom: '20px',
-          }}
-        >
-          {images.map((image, index) => (
-            <SwiperSlide 
-              key={index}
-              style={{ 
-                width: '400px',
-                height: '600px', // 2:3 aspect ratio (even taller)
-              }}
-              className="sm:w-[500px] sm:h-[750px] lg:w-[700px] lg:h-[1050px] xl:w-[800px] xl:h-[1400px]"
-            >
-              <div 
-                className="relative w-full h-full rounded-lg overflow-hidden shadow-xl cursor-pointer bg-gray-100"
-                onClick={() => setFullscreenImage(image.src)}
+      <div className="relative w-full overflow-hidden">
+        <div className="relative left-1/2 transform -translate-x-1/2" style={{ width: '120vw' }}>
+          <Swiper
+            ref={swiperRef}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            spaceBetween={30}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={showDots ? {
+              clickable: true,
+              dynamicBullets: true,
+            } : false}
+            navigation={showArrows}
+            autoplay={autoPlay ? {
+              delay: interval,
+              disableOnInteraction: false,
+            } : false}
+            modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+            className="w-full"
+          >
+            {images.map((image, index) => (
+              <SwiperSlide 
+                key={index}
+                style={{ 
+                  width: '400px',
+                  height: '600px', // 2:3 aspect ratio (even taller)
+                }}
+                className="sm:w-[500px] sm:h-[750px] lg:w-[700px] lg:h-[1050px] xl:w-[800px] xl:h-[1400px]"
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                <div 
+                  className="relative w-full h-full rounded-lg overflow-hidden shadow-xl cursor-pointer bg-gray-100"
+                  onClick={() => setFullscreenImage(image.src)}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       {/* Fullscreen Modal */}
