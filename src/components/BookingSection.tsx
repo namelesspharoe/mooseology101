@@ -7,8 +7,8 @@ export function BookingSection() {
   
   // Update these with your actual Calendly URLs
   const calendlyUrls = {
-    'half-day': 'https://calendly.com/namelesspharoe/half-day-private-lesson-4-hours-1-250',
-    'full-day': 'https://calendly.com/namelesspharoe/full-day-private'
+    'half-day': 'https://calendly.com/namelesspharoe/new-meeting',
+    'full-day': 'https://calendly.com/namelesspharoe/new-meeting'
   };
 
   const packages = [
@@ -92,11 +92,11 @@ export function BookingSection() {
                     </li>
                   ))}
                 </ul>
-                <button 
-                  className="w-full px-6 py-3 bg-gray-500 text-white rounded-full cursor-not-allowed opacity-50" 
-                  disabled
+                <button
+                  onClick={() => setSelectedPackage(pkg.id)}
+                  className="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors"
                 >
-                  Lessons available for booking August 24
+                  Book {pkg.title}
                 </button>
               </motion.div>
             ))}
