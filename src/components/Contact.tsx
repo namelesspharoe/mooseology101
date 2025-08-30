@@ -6,6 +6,7 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
 
@@ -17,12 +18,12 @@ export function Contact() {
 
     try {
       const subject = `Ski Lesson Inquiry from ${formData.name}`;
-      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`;
       window.location.href = `mailto:robertjon1@mac.com?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
       toast.success("Redirecting to your email client!");
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
       toast.error("Failed to prepare message. Please try again.");
     } finally {
@@ -89,6 +90,23 @@ export function Contact() {
                   className="w-full px-4 py-3 rounded-md bg-gray-700/50 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
                 />
               </div>
+            </div>
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium mb-2 text-white"
+              >
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-md bg-gray-700/50 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-white"
+                placeholder="(555) 123-4567"
+              />
             </div>
             <div>
               <label
