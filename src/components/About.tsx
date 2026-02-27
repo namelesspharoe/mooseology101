@@ -17,6 +17,7 @@ export function About() {
   });
 
   const password = "magicmoose";
+  console.log(typedKeys)
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
