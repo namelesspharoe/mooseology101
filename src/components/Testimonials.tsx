@@ -33,6 +33,40 @@ const testimonials = [
   
 ];
 
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[number];
+}) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isLongQuote = testimonial.quote.length > 200;
+  const displayQuote =
+    isLongQuote && !isExpanded
+      ? testimonial.quote.substring(0, 200) + "..."
+      : testimonial.quote;
+
+  return (
+    <div className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-4">
+      <div className="h-full bg-gray-800/50 backdrop-blur-md p-8 rounded-lg text-center">
+        <p className="text-lg mb-6 italic text-gray-300">
+          "{displayQuote}"
+        </p>
+        {isLongQuote && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-blue-400 hover:text-blue-300 text-sm mb-4 transition-colors"
+          >
+            {isExpanded ? "Read Less" : "Read More"}
+          </button>
+        )}
+        <h3 className="font-bold text-xl text-white">
+          {testimonial.name}
+        </h3>
+      </div>
+    </div>
+  );
+}
+
 export function Testimonials() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
 
@@ -78,37 +112,12 @@ export function Testimonials() {
 
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {testimonials.map((testimonial) => {
-              const [isExpanded, setIsExpanded] = useState(false);
-              const isLongQuote = testimonial.quote.length > 200;
-              const displayQuote = isLongQuote && !isExpanded 
-                ? testimonial.quote.substring(0, 200) + "..."
-                : testimonial.quote;
-
-              return (
-                <div
-                  key={testimonial.name}
-                  className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] p-4"
-                >
-                  <div className="h-full bg-gray-800/50 backdrop-blur-md p-8 rounded-lg text-center">
-                    <p className="text-lg mb-6 italic text-gray-300">
-                      "{displayQuote}"
-                    </p>
-                    {isLongQuote && (
-                      <button
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="text-blue-400 hover:text-blue-300 text-sm mb-4 transition-colors"
-                      >
-                        {isExpanded ? "Read Less" : "Read More"}
-                      </button>
-                    )}
-                    <h3 className="font-bold text-xl text-white">
-                      {testimonial.name}
-                    </h3>
-                  </div>
-                </div>
-              );
-            })}
+            {testimonials.map((testimonial) => (
+              <TestimonialCard
+                key={testimonial.name}
+                testimonial={testimonial}
+              />
+            ))}
           </div>
         </div>
 

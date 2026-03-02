@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, type SwiperRef } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
@@ -26,7 +26,7 @@ export function ImageSlideshow({
   showDots = false, 
   showArrows = false 
 }: ImageSlideshowProps) {
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperRef | null>(null);
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null);
 
   if (images.length === 0) {
