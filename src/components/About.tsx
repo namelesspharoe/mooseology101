@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export function About() {
   const [isEditMode, setIsEditMode] = useState(false);
-  const [typedKeys, setTypedKeys] = useState("");
+  const [, setTypedKeys] = useState("");
   const [content, setContent] = useState({
     intro: "The leaves are turning and starting to fall while summer quickly fades, which means winter will soon be on our doorstep. In a matter of weeks Park City will soon transform into a winter wonderland creating new stories of skiing, snowboarding and a host of winter activities.",
     parkCity: "Park City Mountain Resort is a premier ski destination with easy convenient access being under an hour from the Salt Lake City airport complete with local lodging, great dinning, shopping and galleries all nestled in and around Park City for a great start to your epic ski vacation.",
