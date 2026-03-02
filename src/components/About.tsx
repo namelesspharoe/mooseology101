@@ -17,7 +17,18 @@ export function About() {
   });
 
   const password = "magicmoose";
-  console.log(typedKeys)
+
+  // Load saved content from localStorage on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('mooseContent');
+    if (saved) {
+      try {
+        setContent(JSON.parse(saved));
+      } catch {
+        // ignore invalid saved data
+      }
+    }
+  }, []);
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
