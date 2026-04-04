@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import { useAuth } from "../contexts/AuthContext";
+import { LoginModal } from "./LoginModal";
 
 const navLinks = [
   { to: "home", label: "Home" },
@@ -11,8 +13,10 @@ const navLinks = [
 ];
 
 export function Navigation() {
+  const { user, loading, signOut, isEditMode, setEditMode } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,6 +61,38 @@ export function Navigation() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
+          {/* Admin login / logout – only show when auth has finished loading */}
+          {!loading && (
+            user ? (
+              <>
+                <button
+                  type="button"
+                  onClick={() => setEditMode(!isEditMode)}
+                  className={`px-4 py-2 text-white rounded-md transition-colors ${
+                    isEditMode ? "bg-yellow-600/90 hover:bg-yellow-500/90" : "hover:bg-blue-500/20"
+                  }`}
+                  title="Toggle edit mode"
+                >
+                  {isEditMode ? "Exit edit" : "Edit site"}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => signOut()}
+                  className="px-4 py-2 text-white rounded-md hover:bg-blue-500/20 transition-colors"
+                >
+                  Log out
+                </button>
+              </>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setIsLoginOpen(true)}
+                className="px-4 py-2 text-white rounded-md hover:bg-blue-500/20 transition-colors"
+              >
+                Log in
+              </button>
+            )
+          )}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -115,10 +151,51 @@ export function Navigation() {
                   </Link>
                 </li>
               ))}
+              {!loading && (
+                <li className="w-full text-center">
+                  {user ? (
+                    <div className="w-full">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEditMode(!isEditMode);
+                          setIsMenuOpen(false);
+                        }}
+                        className={`block py-3 text-white transition-colors w-full ${
+                          isEditMode ? "bg-yellow-600/90 hover:bg-yellow-500/90" : "hover:bg-blue-500/20"
+                        }`}
+                      >
+                        {isEditMode ? "Exit edit" : "Edit site"}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          signOut();
+                          setIsMenuOpen(false);
+                        }}
+                        className="block py-3 text-white hover:bg-blue-500/20 transition-colors w-full"
+                      >
+                        Log out
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => { setIsLoginOpen(true); setIsMenuOpen(false); }}
+                      className="block py-3 text-white hover:bg-blue-500/20 transition-colors w-full"
+                    >
+                      Log in
+                    </button>
+                  )}
+                </li>
+              )}
             </ul>
           </motion.nav>
         )}
       </AnimatePresence>
+
+      {/* Login modal for admin (Moose) – opens when "Log in" is clicked */}
+      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </header>
   );
 }

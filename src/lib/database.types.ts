@@ -151,6 +151,51 @@ export interface Database {
           updated_at?: string
         }
       }
+      // Site-editable content (About text, image URLs). Key-value store.
+      site_content: {
+        Row: {
+          id: string
+          key: string
+          value: Json
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          key: string
+          value: Json
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          key?: string
+          value?: Json
+          updated_at?: string
+        }
+      }
+      // Slideshow images: src (URL), alt, order. Served from Supabase Storage or external URLs.
+      slideshow_images: {
+        Row: {
+          id: string
+          src: string
+          alt: string
+          sort_order: number
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          src: string
+          alt: string
+          sort_order?: number
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          src?: string
+          alt?: string
+          sort_order?: number
+          created_at?: string
+        }
+      }
     }
   }
 }
