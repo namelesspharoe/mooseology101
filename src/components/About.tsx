@@ -76,8 +76,8 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://firebasestorage.googleapis.com/v0/b/concierge-95495.firebasestorage.app/o/moose2.PNG?alt=media&token=60ca6b54-9349-4349-9ce6-703f52d8f708"
-              alt="The Moose on the slopes"
+              src="https://i.ibb.co/Kp7gGRmd/moose2.png"
+              alt="moose2"
               className="rounded-lg shadow-xl w-full"
               loading="eager"
               fetchPriority="high"
