@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useAuth } from "../contexts/AuthContext";
 import { useSiteContent, DEFAULT_SITE_CONTENT, type SiteContentKey, type SiteContentMap } from "../hooks/useSiteContent";
+import { ImageUpload } from "./ImageUpload";
 
 export function About() {
   const { user, isEditMode, setEditMode } = useAuth();
@@ -26,6 +27,16 @@ export function About() {
 
   const handleContentChange = (key: SiteContentKey, value: string) => {
     setContent((prev: SiteContentMap) => ({ ...prev, [key]: value }));
+  };
+
+  const handleAboutImageUpload = async (url: string) => {
+    handleContentChange("aboutImage", url);
+    const { error } = await upsertContent({ aboutImage: url });
+    if (error) {
+      toast.error("Photo uploaded but failed to save. Try Save.");
+      return;
+    }
+    toast.success("Photo updated.");
   };
 
   const saveChanges = async () => {
@@ -76,13 +87,18 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://i.ibb.co/Kp7gGRmd/moose2.png"
-              alt="moose2"
+              src={content.aboutImage}
+              alt="The Moose on the slopes"
               className="rounded-lg shadow-xl w-full"
               loading="eager"
               fetchPriority="high"
               decoding="async"
             />
+            {canEdit && isEditMode && (
+              <div className="mt-4">
+                <ImageUpload pathPrefix="about" onUploadSuccess={handleAboutImageUpload} />
+              </div>
+            )}
           </motion.div>
           <motion.div
             className="prose prose-invert lg:prose-xl max-w-none text-center"

@@ -8,6 +8,7 @@ import { useState, useEffect, useCallback } from "react";
 import { supabase } from "../lib/supabase";
 
 export type SiteContentKey =
+  | "aboutImage"
   | "intro"
   | "parkCity"
   | "mooseIntro"
@@ -21,6 +22,7 @@ export type SiteContentKey =
 export type SiteContentMap = Record<SiteContentKey, string>;
 
 export const DEFAULT_SITE_CONTENT: SiteContentMap = {
+  aboutImage: "https://i.ibb.co/Kp7gGRmd/moose2.png",
   intro:
     "The leaves are turning and starting to fall while summer quickly fades, which means winter will soon be on our doorstep. In a matter of weeks Park City will soon transform into a winter wonderland creating new stories of skiing, snowboarding and a host of winter activities.",
   parkCity:
