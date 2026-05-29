@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import { useAuth } from "../contexts/AuthContext";
-import { useSiteContent, DEFAULT_SITE_CONTENT, type SiteContentKey, type SiteContentMap } from "../hooks/useSiteContent";
+import { useSiteContent, DEFAULT_SITE_CONTENT, ABOUT_CONTENT_KEYS, type SiteContentKey, type SiteContentMap } from "../hooks/useSiteContent";
 import { ImageUpload } from "./ImageUpload";
 
 export function About() {
@@ -40,7 +40,10 @@ export function About() {
   };
 
   const saveChanges = async () => {
-    const { error } = await upsertContent(content);
+    const updates = Object.fromEntries(
+      ABOUT_CONTENT_KEYS.map((key) => [key, content[key]])
+    ) as Partial<SiteContentMap>;
+    const { error } = await upsertContent(updates);
     if (error) {
       toast.error("Failed to save. Check console.");
       return;

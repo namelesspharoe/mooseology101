@@ -8,6 +8,10 @@ import { useState, useEffect, useCallback } from "react";
 import { supabase } from "../lib/supabase";
 
 export type SiteContentKey =
+  | "heroTitle"
+  | "heroSubtitle"
+  | "heroCtaText"
+  | "heroVideoUrl"
   | "aboutImage"
   | "intro"
   | "parkCity"
@@ -19,9 +23,34 @@ export type SiteContentKey =
   | "newStudentsProcess"
   | "veteranStudents";
 
+export const HERO_CONTENT_KEYS: SiteContentKey[] = [
+  "heroTitle",
+  "heroSubtitle",
+  "heroCtaText",
+  "heroVideoUrl",
+];
+
+export const ABOUT_CONTENT_KEYS: SiteContentKey[] = [
+  "aboutImage",
+  "intro",
+  "parkCity",
+  "mooseIntro",
+  "experience",
+  "callToAction",
+  "contact",
+  "newStudentsIntro",
+  "newStudentsProcess",
+  "veteranStudents",
+];
+
 export type SiteContentMap = Record<SiteContentKey, string>;
 
 export const DEFAULT_SITE_CONTENT: SiteContentMap = {
+  heroTitle: "Elevate Your Ski Experience",
+  heroSubtitle:
+    'Book a private lesson with "The Moose" and start planning your 2026/2027 ski trip. Plan ahead to secure your dates!',
+  heroCtaText: "Book Your Lesson Today",
+  heroVideoUrl: "https://www.youtube.com/watch?v=J_WBXDaGZYc",
   aboutImage: "https://i.ibb.co/Kp7gGRmd/moose2.png",
   intro:
     "The leaves are turning and starting to fall while summer quickly fades, which means winter will soon be on our doorstep. In a matter of weeks Park City will soon transform into a winter wonderland creating new stories of skiing, snowboarding and a host of winter activities.",
